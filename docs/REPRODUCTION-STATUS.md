@@ -27,22 +27,25 @@ itself.
 **All five scripts import and resolve their paths inside the repository.** No
 absolute or machine-specific path remains anywhere in the codebase.
 
+**The Python layer read the Stata build output.** As transferred, all three
+Python scripts read `nfcs_p1_final_analytic.csv`, a filename this repository
+never produces — `01_build.do` exports `nfcs_p1_built_analytic.csv`. Lena
+confirmed on 2026-08-25 that she renamed the Stata export by hand before
+uploading it. The two names refer to the same file, so the chain from build to
+prediction is intact. The scripts now read the Stata export directly and the
+rename step is gone.
+
+This rests on Lena's account rather than on a file comparison. A byte-level
+check happens automatically the first time the pipeline is run end to end.
+
 ---
 
 ## Not yet verified
 
 **The pipeline has never been run end to end from this repository.** The Stata
 was run on one machine; the Python was written and executed in an assistant chat
-session, against an uploaded file. The two halves have not been connected in one
-pass by anyone.
-
-**The Stata export and the Python input do not share a filename.**
-`01_build.do` writes `nfcs_p1_built_analytic.csv`. As transferred, all three
-Python scripts read `nfcs_p1_final_analytic.csv` — a name this repository never
-produces. Something happened between the two steps that is not written down: a
-rename, or a different file. The scripts now point at the Stata export directly,
-which is the intended chain, but **that the two files are the same file is an
-assumption, not an established fact.**
+session, against the Stata export uploaded under a different name. The two
+halves have not been connected in one pass by anyone.
 
 **The committed prediction tables were not produced by the committed code.** As
 transferred, `03_` and `04_` wrote `nested_cv_summary.csv` and
@@ -78,15 +81,17 @@ Three outcomes:
 
 - **They match.** Delete the "not yet verified" section above, and the
   repository's reproducibility claim is fully backed.
-- **They differ in the last decimals.** Expected if scikit-learn or Stata
-  versions moved. Record the versions used and note the tolerance.
-- **They differ materially.** Then the input to the Python layer was not the
-  Stata export, and the provenance of `nfcs_p1_final_analytic.csv` needs to be
-  established before the predictive claims are published.
+- **They differ in the last decimals.** The likely outcome if scikit-learn moved
+  between the original run and the rerun. Record the versions used and note the
+  tolerance rather than overwriting the tables silently.
+- **They differ materially.** Unexpected now that the input file is accounted
+  for. Investigate before publishing the predictive claims rather than
+  reconciling the tables to the new numbers.
 
 Until that run happens, the inferential result is supported by a logged,
-self-validating build. The predictive result is supported by output whose
-generating run cannot be traced from this repository.
+self-validating build. The predictive result rests on output that this code has
+not yet been shown to regenerate — a narrower gap than it looks, since the input
+is accounted for, but not yet closed.
 
 ---
 
