@@ -2,19 +2,29 @@
 
 What was already known before this study, who established it, on what data, and what it leaves open.
 
-✅ full publisher record checked (authors, venue, venue type, year, volume, pages, DOI, scope) · ⚠️ from reading notes, not yet confirmed
+✅ full publisher record checked (authors, venue, venue type, year, volume, pages, DOI, scope) · 🔎 bibliographic record verified against the Crossref registry, but the description is still from reading notes · ⚠️ from reading notes, not yet confirmed
 
-**This is a living literature map, not a closed review.** The ⚠️ entries are shown rather than withheld so a reader can see exactly which citations we have verified and which we have not.
+**This is a living literature map, not a closed review.** The ⚠️ and 🔎 entries are shown rather than withheld so a reader can see exactly which citations we have verified, how far that verification goes, and which we have not checked.
+
+*Citations last swept against Crossref on 25 August 2026. Entries that could not be sourced were removed rather than left standing.*
 
 ---
 
 ## 1. The origin: political science, two decades ahead
 
-⚠️ **Mondak (1999, 2000, 2001); Mondak & Davis (2001); Mondak & Anderson (2004)**
+🔎 **Mondak, J. J. (1999). Reconsidering the measurement of political knowledge. *Political Analysis*, 8(1), 57–82. https://doi.org/10.1093/oxfordjournals.pan.a029805**
+
+🔎 **Mondak, J. J. (2001). Developing valid knowledge scales. *American Journal of Political Science*, 45(1), 224–238. https://doi.org/10.2307/2669369**
+
+🔎 **Mondak, J. J., & Davis, B. C. (2001). Asked and answered: Knowledge levels when we will not take "don't know" for an answer. *Political Behavior*, 23(3), 199–224. https://doi.org/10.1023/a:1015015227594**
+
+🔎 **Mondak, J. J., & Anderson, M. R. (2004). The knowledge gap: A reexamination of gender-based differences in political knowledge. *The Journal of Politics*, 66(2), 492–512. https://doi.org/10.1111/j.1468-2508.2004.00161.x**
 
 Respondents can be fully informed, partially informed, misinformed, or uninformed — four latent states, three response categories, and a scoring rule that collapses them into two. Two respondents with identical knowledge get different scores if they differ in willingness to answer under uncertainty.
 
-U.S. political knowledge surveys. This is the theory, and we cite it as theory rather than as anything we found. Full publisher records still needed.
+U.S. political knowledge surveys. This is the theory, and we cite it as theory rather than as anything we found.
+
+*An earlier version of this entry also listed a Mondak (2000). No such paper surfaced in the registry; Political Analysis volume 8 spans 1999–2000, so it appears to have been the 1999 article dated differently in two sets of notes. Removed pending evidence of a distinct fourth paper.*
 
 ---
 
@@ -46,7 +56,7 @@ DK responding is contaminated by personality and emotional factors. The closest 
 
 U.S., NFCS — the nearest neighbor by dataset.
 
-⚠️ **Kim, N., & Mountain, T. P. (2019). Financial knowledge and "don't know" response.**
+🔎 **Kim, N., & Mountain, T. P. (2019). Financial knowledge and "don't know" response. *Journal of Consumer Affairs*, 53(4), 1948–1969. https://doi.org/10.1111/joca.12275**
 
 Proposed replacing DK using sample proportions; showed the gender gap in objective knowledge is almost entirely attributable to the gender differential in DK propensity.
 
@@ -56,9 +66,17 @@ Proposed replacing DK using sample proportions; showed the gender gap in objecti
 
 Structural model of guessing. Italian data, two waves. Not U.S.
 
-⚠️ **Houts & Knoll (2020); Ooi (2020)** — 3PL models on financial knowledge items, finding strong support for guessing.
+🔎 **Knoll, M. A. Z., & Houts, C. R. (2012). The financial knowledge scale: An application of item response theory to the assessment of financial literacy. *Journal of Consumer Affairs*, 46(3), 381–410. https://doi.org/10.1111/j.1745-6606.2012.01241.x**
 
-⚠️ **Krosnick & Presser (2010)** — satisficing. Offering DK lets the uninformed admit it, and also discourages the partially informed from making the effort.
+Item response theory applied to financial knowledge items.
+
+⚠️ **Claim-level flag:** this entry previously read "Houts & Knoll (2020)" with a description of 3PL models finding strong support for guessing. The registry has no such paper; the record above — reversed author order, 2012 rather than 2020 — is the evident match by topic. Whether it uses a 3PL specification, and whether that is where the guessing result comes from, has not been confirmed from the article.
+
+✅ **Krosnick, J. A., & Presser, S. (2010). Question and questionnaire design. In P. V. Marsden & J. D. Wright (Eds.), *Handbook of Survey Research* (2nd ed., pp. 263–313). Emerald.**
+
+Satisficing. Offering DK lets the uninformed admit it, and also discourages the partially informed from making the effort.
+
+*A book chapter, so it carries no DOI and does not appear in the Crossref registry. Verified against the volume instead.*
 
 ---
 
@@ -72,13 +90,11 @@ Removing the DK option raises measured knowledge, and part of that increase is g
 
 ⚠️ **Claim-level flag:** the specific Table 1 and Table 3 figures in our notes need re-checking against the published note.
 
-⚠️ **Bucher-Koenen, T., Alessie, R., Lusardi, A., & van Rooij, M. (2021). Fearless woman: Financial literacy, confidence, and stock market participation.**
+🔎 **Bucher-Koenen, T., Alessie, R. J. M., Lusardi, A., & van Rooij, M. (2021). Fearless woman: Financial literacy and stock market participation. NBER Working Paper 28723. https://doi.org/10.3386/w28723**
 
-Dutch panel; within-subject, the same respondents six weeks apart. This work has circulated as a working paper and in published form — we need to cite whichever version we used.
+Dutch panel; within-subject, the same respondents six weeks apart.
 
-⚠️ **IZA DP 16628** — multi-arm randomized trial on DK options and gender gaps.
-
-⚠️ **Marley-Payne et al. (2024)**
+*Two corrections. The title carried an extra word — "confidence" — that is not in it. And the note that this had appeared in published form does not hold up: the registry indexes only working-paper forms (NBER 28723 and two SSRN postings). Cited here as the NBER working paper, which is what can be verified. If a journal version has since appeared, it should replace this.*
 
 ---
 
@@ -114,6 +130,34 @@ Also from FINRA's 2024 Investor Survey report: investors who rate their own know
 
 ---
 
+## Removed in the 25 August 2026 sweep
+
+Three entries were dropped because no source could be found for them. They are
+recorded here rather than deleted quietly, so that anyone who recognises one can
+tell us what it was.
+
+**Ooi (2020)** — previously grouped with Knoll & Houts as a 3PL model of
+financial knowledge items. Nothing matching an author "Ooi" on this topic
+appears in the registry. Possibly a thesis, a working paper, or a venue that is
+not indexed.
+
+**IZA DP 16628** — described in our notes as a multi-arm randomized trial on DK
+options and gender gaps. IZA discussion papers are frequently not registered, so
+absence is not evidence against it, but we could not confirm the number, the
+authors, or the title.
+
+**Marley-Payne et al. (2024)** — an author and a year, with no title and no
+description attached. The nearest candidate, Marley-Payne, Valdes, Mottola &
+Fontes (2025) in *Journal of Financial Literacy and Wellbeing*, is about math
+and financial literacy in relation to financial behaviour, which does not belong
+in a section on experimental evidence about the DK option. Rather than
+substitute a paper that does not fit the argument it was cited for, the entry
+was removed.
+
+---
+
 ## Contributing
 
 If we have mischaracterized a study, missed one that occupies this ground, or overstated what remains open, open an Issue or email householdfinancelab@gmail.com. That is a correction we want.
+
+That includes the three entries above. If one of them is a paper you know, tell us and it goes back in.
