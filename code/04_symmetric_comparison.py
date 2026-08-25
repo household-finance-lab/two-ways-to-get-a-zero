@@ -95,6 +95,11 @@ class_auc = pd.DataFrame(class_rows)
 print(f"Common predictive sample: N={len(dat):,}")
 print(summary.round(4))
 print(class_auc.pivot(index="Model", columns="Class", values="One-vs-rest AUC").round(4))
+# Flatten the MultiIndex columns for export so the committed table has a single
+# header row. The console view above keeps the two-level layout.
+summary_flat = summary.copy()
+summary_flat.columns = [f"{metric} {stat}" for metric, stat in summary.columns]
+
 cv_results.to_csv(TABLES / "symmetric_cv_fold_results.csv", index=False)
-summary.to_csv(TABLES / "symmetric_cv_summary.csv")
+summary_flat.to_csv(TABLES / "prediction_symmetric_results.csv")
 class_auc.to_csv(TABLES / "symmetric_class_auc.csv", index=False)

@@ -23,6 +23,7 @@ Among investors who answered the same number of knowledge questions correctly, e
 | [`LITERATURE.md`](LITERATURE.md) | Who established what before us, on what data, and what remains open. A living map: entries carry verification markers |
 | [`data/README.md`](data/README.md) | Where to get the source data, what the build expects, how to verify your build |
 | [`docs/nonquiz-dk-sensitivity-interpretation.md`](docs/nonquiz-dk-sensitivity-interpretation.md) | Measurement audit of the auxiliary DK control, undertaken after we found the original was under-specified |
+| [`docs/REPRODUCTION-STATUS.md`](docs/REPRODUCTION-STATUS.md) | What in this repository has been verified to run and what has not, as of the latest commit |
 
 ## Repository layout
 

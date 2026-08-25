@@ -76,5 +76,11 @@ cv_results = pd.DataFrame(rows)
 summary = cv_results.groupby("Model")[["Log loss", "Brier", "Macro AUC", "Accuracy"]].agg(["mean", "std"])
 print(f"Common predictive sample: N={len(pred):,}")
 print(summary.round(4))
+# Flatten the MultiIndex columns for export so the committed table has a single
+# header row. The console view above keeps the two-level layout, which reads
+# better; only the file on disk is flattened.
+summary_flat = summary.copy()
+summary_flat.columns = [f"{metric} {stat}" for metric, stat in summary.columns]
+
 cv_results.to_csv(TABLES / "nested_cv_fold_results.csv", index=False)
-summary.to_csv(TABLES / "nested_cv_summary.csv")
+summary_flat.to_csv(TABLES / "prediction_nested_results.csv")
