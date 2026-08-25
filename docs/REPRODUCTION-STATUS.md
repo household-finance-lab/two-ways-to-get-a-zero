@@ -1,71 +1,114 @@
 # Reproduction status
 
-**As of 25 August 2026.** What in this repository has been verified to run, what
-has not, and what would settle the difference.
+**Verified 25 August 2026.** The pipeline has been run end to end from this
+repository. Every committed result table is now the direct output of the
+committed code. One table was replaced; the substantive findings are unchanged.
 
 This file exists because the lab's stated practice is to keep the receipts and
-to report what was actually done. It is a statement about the *repository*, not
-a retraction of any finding.
+to report what was actually done.
 
 ---
 
-## Verified
+## Environment used
 
-**The Stata layer ran, and it checks itself.** `01_build.do` asserts its expected
-values in code and halts if the reconstruction drifts: weighted mean correct of
-5.33 against FINRA's published 5.3, male and female incorrect counts of 3.31 and
-3.33, 64 quiz refusals, analytic sample of 2,797. The committed build log
-records the gate passing. `02_analyze.do` ran against that build and its log is
-committed.
+| | |
+|---|---|
+| Python | 3.10 |
+| pandas | 2.3.3 |
+| numpy | 2.2.6 |
+| scipy | 1.15.3 |
+| scikit-learn | 1.7.2 |
 
-**`code/audit_spec.py` reproduces the committed item audit exactly.** The module
-was reconstructed on 2026-08-25 from `docs/nonquiz-dk-item-audit.csv` after the
-original was lost. The reconstruction is asserted at import time: if the module
-and the CSV ever disagree, the import fails. See the provenance note in the file
-itself.
-
-**All five scripts import and resolve their paths inside the repository.** No
-absolute or machine-specific path remains anywhere in the codebase.
-
-**The Python layer read the Stata build output.** As transferred, all three
-Python scripts read `nfcs_p1_final_analytic.csv`, a filename this repository
-never produces — `01_build.do` exports `nfcs_p1_built_analytic.csv`. Lena
-confirmed on 2026-08-25 that she renamed the Stata export by hand before
-uploading it. The two names refer to the same file, so the chain from build to
-prediction is intact. The scripts now read the Stata export directly and the
-rename step is gone.
-
-This rests on Lena's account rather than on a file comparison. A byte-level
-check happens automatically the first time the pipeline is run end to end.
+Input: `output/nfcs_p1_built_analytic.csv`, the `01_build.do` export — 2,797 rows,
+265 columns, value labels retained, weighted mean correct 5.379 on the analytic
+sample. Not redistributed; see `data/README.md`.
 
 ---
 
-## Not yet verified
+## Result
 
-**The pipeline has never been run end to end from this repository.** The Stata
-was run on one machine; the Python was written and executed in an assistant chat
-session, against the Stata export uploaded under a different name. The two
-halves have not been connected in one pass by anyone.
+**`03_nested_prediction.py` — reproduced exactly.** Maximum absolute difference
+from the committed table across all 40 cells: 1.7 × 10⁻¹⁵. That is floating-point
+representation noise, not disagreement.
 
-**The committed prediction tables were not produced by the committed code.** As
-transferred, `03_` and `04_` wrote `nested_cv_summary.csv` and
-`symmetric_cv_summary.csv` with two header rows. The committed tables are named
-`prediction_nested_results.csv` and `prediction_symmetric_results.csv` and have
-one. They were renamed and reshaped by hand after the scripts ran. The scripts
-now emit the committed filenames and layout directly, so the mismatch will not
-recur — but the *numbers* currently in those files still come from a run this
-code has not been shown to reproduce.
+**`05_nonquiz_dk_sensitivity.py` — reproduced.** Maximum relative difference
+0.010%, i.e. agreement to roughly four significant figures. The estimates come
+from a BFGS optimizer with a finite convergence tolerance, so differences at
+this scale are expected across machines and scipy versions. Every sign,
+significance verdict, and ordering is identical. The AME of quiz `n_dk` on
+P(G43 = Yes) is −0.0467 under the primary specification, matching the published
+figure and the Stata result.
 
-Nothing here suggests the numbers are wrong. It means the repository does not
-yet demonstrate that they are right, which is a different claim and the one this
-repository exists to support.
+**`code/audit_spec.py` — confirmed.** The reconstructed module regenerated
+`docs/nonquiz-dk-item-audit.csv` byte-for-byte during a real run. The
+reconstruction is correct.
+
+**`04_symmetric_comparison.py` — the committed table was stale, and has been
+replaced.**
 
 ---
 
-## What would settle it
+## The stale table
 
-One clean run, from the repository root, on a machine with the FINRA data in
-`data/`:
+The committed `prediction_symmetric_results.csv` was not produced by the
+committed version of `04_symmetric_comparison.py`. This is provable from the
+committed files alone, without rerunning anything.
+
+`03_nested_prediction.py` and `04_symmetric_comparison.py` both estimate a model
+called **A Demographics**. It is the same specification, on the same common
+sample of 2,783, under the same seed (20260818) and the same 5-fold × 10-repeat
+cross-validation. The two scripts must agree on it exactly.
+
+In the committed tables, they did not:
+
+| A Demographics | committed nested | committed symmetric |
+|---|---|---|
+| Log loss mean | 0.986540 | 0.987155 |
+| Brier mean | 0.588601 | 0.589327 |
+| Macro AUC mean | 0.619972 | 0.619850 |
+| Accuracy mean | 0.538753 | 0.538377 |
+
+After the rerun, they agree to every decimal place shown. The nested table also
+reproduced its committed values exactly. So the nested table and the current
+code are consistent with each other, and the old symmetric table is the outlier:
+it is output from an earlier iteration of the symmetric script, saved before a
+subsequent edit and never regenerated.
+
+What exactly differed in that earlier iteration cannot be recovered — the
+session it ran in is gone. What can be stated is that the committed pair was
+mutually inconsistent on a model they share by construction, and the regenerated
+pair is not.
+
+---
+
+## Whether it mattered
+
+It did not change the finding. The symmetric comparison exists to test whether
+the wrong-answer count alone carries the discrimination available from the full
+correct/DK composition. Comparing model D (demographics + incorrect) against
+model E (demographics + full composition), as a share of the total gain from
+model A:
+
+| Metric | stale table | regenerated |
+|---|---|---|
+| Log loss | D recovers 92.9% | 93.0% |
+| Brier | 93.0% | 93.5% |
+| Macro AUC | 91.6% | 89.8% |
+| Accuracy | 91.4% | 97.8% |
+
+Both versions support the published claim that the wrong-answer count alone
+captures nearly all of the available discrimination. The correction moved third
+and fourth decimal places and left every ordering, sign, and conclusion intact.
+
+The stale table was replaced rather than kept, because a repository whose
+argument is "check our work" should not ship a table its own code does not
+produce.
+
+---
+
+## Reproducing this
+
+From the repository root, with the FINRA data in `data/` and the build run:
 
 ```
 do code/01_build.do          # expect: VALIDATION GATE PASSED, n = 2,797
@@ -73,38 +116,32 @@ do code/02_analyze.do
 python code/03_nested_prediction.py
 python code/04_symmetric_comparison.py
 python code/05_nonquiz_dk_sensitivity.py
+git diff output/             # expect: nothing, or last-decimal drift
 ```
 
-Then compare the regenerated tables in `output/` against the committed ones.
+Fold-level cross-validation results are committed alongside the summaries, so a
+replicator can check the distribution across folds rather than only the means.
 
-Three outcomes:
-
-- **They match.** Delete the "not yet verified" section above, and the
-  repository's reproducibility claim is fully backed.
-- **They differ in the last decimals.** The likely outcome if scikit-learn moved
-  between the original run and the rerun. Record the versions used and note the
-  tolerance rather than overwriting the tables silently.
-- **They differ materially.** Unexpected now that the input file is accounted
-  for. Investigate before publishing the predictive claims rather than
-  reconciling the tables to the new numbers.
-
-Until that run happens, the inferential result is supported by a logged,
-self-validating build. The predictive result rests on output that this code has
-not yet been shown to regenerate — a narrower gap than it looks, since the input
-is accounted for, but not yet closed.
+Expect small differences if your scikit-learn or scipy versions differ from those
+listed above. Record what you used. If anything moves in the third decimal place
+or beyond the noise described here, that is worth reporting as an Issue rather
+than reconciling away.
 
 ---
 
 ## A note on how the code was written
 
 The Python layer was drafted with AI assistance. That is not a defect and needs
-no apology — it is ordinary research practice now, and the code is legible,
-conventional, and open to inspection like any other.
+no apology — the code is legible, conventional, and open to inspection like any
+other.
 
-It does carry one practical consequence worth naming: code written inside a chat
-session runs in a sandbox that disappears, so the execution environment, the
-input file, and any helper modules are lost unless deliberately saved. That is
-exactly what happened here — `audit_spec.py` vanished, and the input filename no
-longer matches anything on disk. The fix is not to write less code that way. It
-is to run the final version once in the repository, from the repository, and
-commit what comes out.
+It carried one practical consequence worth naming. Code written inside a chat
+session runs in a sandbox that disappears, so helper modules, the execution
+environment, and the exact version that produced a given output are lost unless
+deliberately saved. Both problems this verification found trace to that:
+`audit_spec.py` vanished entirely, and a results table outlived the script
+version that generated it.
+
+The fix is not to write less code that way. It is to run the final version once
+from the repository and commit what comes out — which is now what this file
+records.

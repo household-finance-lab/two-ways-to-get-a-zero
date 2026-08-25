@@ -1,0 +1,16 @@
+Class,Model,One-vs-rest AUC
+No,A Demographics,0.5222580497342831
+No,B Demographics + Correct,0.5355371445077491
+No,C Demographics + DK,0.5270216861241657
+No,D Demographics + Incorrect,0.5394281068538253
+No,E Full composition (Correct + DK),0.5445016089997268
+Don't know,A Demographics,0.6689978515289366
+Don't know,B Demographics + Correct,0.6702827746899838
+Don't know,C Demographics + DK,0.6909287728630508
+Don't know,D Demographics + Incorrect,0.6927278123260585
+Don't know,E Full composition (Correct + DK),0.6966520896870352
+Yes,A Demographics,0.6494470154998208
+Yes,B Demographics + Correct,0.6547847178145372
+Yes,C Demographics + DK,0.6606132032099195
+Yes,D Demographics + Incorrect,0.6809068769473715
+Yes,E Full composition (Correct + DK),0.6802319011987797
