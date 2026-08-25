@@ -1,0 +1,106 @@
+variable,block,construct,universally_asked,meaning_of_98,dk_opportunity_type,include,reason
+NFCSID,administrative,respondent ID,n/a,no 98 code,none,EXCLUDE,"ID, weight, or demographic; not a survey response with a DK option"
+WGT1,administrative,survey weight,n/a,no 98 code,none,EXCLUDE,"ID, weight, or demographic; not a survey response with a DK option"
+S_Gender2,administrative,sex,n/a,no 98 code,none,EXCLUDE,"ID, weight, or demographic; not a survey response with a DK option"
+S_Age,administrative,age band,n/a,no 98 code,none,EXCLUDE,"ID, weight, or demographic; not a survey response with a DK option"
+S_Ethnicity,administrative,ethnicity,n/a,no 98 code,none,EXCLUDE,"ID, weight, or demographic; not a survey response with a DK option"
+S_Education,administrative,education,n/a,no 98 code,none,EXCLUDE,"ID, weight, or demographic; not a survey response with a DK option"
+S_Income,administrative,household income,n/a,no 98 code,none,EXCLUDE,"ID, weight, or demographic; not a survey response with a DK option"
+A1,A: screening,investment decision role,No — DK terminated the interview,Don't know,n/a,EXCLUDE,"Eligibility screener: A1 in (3,98,99) terminated. Respondents who chose DK are absent by design."
+A2,A: screening,owns retirement accounts,Yes,Don't know,factual/account knowledge,INCLUDE,Asked of all continuing respondents; DK = uncertainty about own retirement holdings.
+A3,A: screening,owns non-retirement securities,No — DK terminated the interview,Don't know,n/a,EXCLUDE,"Eligibility screener: A3 in (2,98,99) terminated. Constant (=Yes) in the file; no DK variance possible."
+B2_1,B2 grid (11 rows),currently owns individual stocks,Yes,Don't know,factual/account knowledge,INCLUDE,Universally administered grid row; DK = uncertainty about own holdings. GRID — see battery weighting.
+B2_2,B2 grid (11 rows),currently owns individual bonds,Yes,Don't know,factual/account knowledge,INCLUDE,Universally administered grid row; DK = uncertainty about own holdings. GRID — see battery weighting.
+B2_3,B2 grid (11 rows),currently owns mutual funds,Yes,Don't know,factual/account knowledge,INCLUDE,Universally administered grid row; DK = uncertainty about own holdings. GRID — see battery weighting.
+B2_4,B2 grid (11 rows),currently owns ETFs,Yes,Don't know,factual/account knowledge,INCLUDE,Universally administered grid row; DK = uncertainty about own holdings. GRID — see battery weighting.
+B2_5,B2 grid (11 rows),currently owns annuities,Yes,Don't know,factual/account knowledge,INCLUDE,Universally administered grid row; DK = uncertainty about own holdings. GRID — see battery weighting.
+B2_7,B2 grid (11 rows),currently owns commodities/futures,Yes,Don't know,factual/account knowledge,INCLUDE,Universally administered grid row; DK = uncertainty about own holdings. GRID — see battery weighting.
+B2_20,B2 grid (11 rows),currently owns whole life insurance,Yes,Don't know,factual/account knowledge,INCLUDE,Universally administered grid row; DK = uncertainty about own holdings. GRID — see battery weighting.
+B2_21,B2 grid (11 rows),currently owns REITs,Yes,Don't know,factual/account knowledge,INCLUDE,Universally administered grid row; DK = uncertainty about own holdings. GRID — see battery weighting.
+B2_23,B2 grid (11 rows),currently owns microcap/penny stocks,Yes,Don't know,factual/account knowledge,INCLUDE,Universally administered grid row; DK = uncertainty about own holdings. GRID — see battery weighting.
+B2_24,B2 grid (11 rows),currently owns structured notes,Yes,Don't know,factual/account knowledge,INCLUDE,Universally administered grid row; DK = uncertainty about own holdings. GRID — see battery weighting.
+B2_25,B2 grid (11 rows),currently owns private placements,Yes,Don't know,factual/account knowledge,INCLUDE,Universally administered grid row; DK = uncertainty about own holdings. GRID — see battery weighting.
+B30_2024,B: investments,when first started investing,Yes,Don't know,recollection,INCLUDE,Universally asked; DK = cannot recall onset.
+B3,B: investments,trading frequency past 12 months,Yes,Don't know,recollection,INCLUDE,Universally asked; DK = cannot recall count.
+B4_2024,B: investments,total non-retirement portfolio value,Yes,Don't know,factual/account knowledge,INCLUDE,Universally asked; DK = does not know own balance.
+B5,B: investments,account permits margin,Yes,Don't know,factual/account knowledge,INCLUDE,Universally asked; DK = does not know own account terms.
+B6,B: investments,has purchased on margin,No — asked only if B5=1,Don't know,recollection,EXCLUDE,Behind skip pattern (B5=1); denominator would vary across respondents.
+B33,B: investments,account permits options trading,Yes,Don't know,factual/account knowledge,INCLUDE,Universally asked; DK = does not know own account terms.
+B34,B: investments,ever purchased/sold options,No — asked only if B33=1,Don't know,recollection,EXCLUDE,Behind skip pattern (B33=1).
+B10,B: investments,risk willingness statement,Yes,Don't know,attitudinal/self-description,INCLUDE,Universally asked; DK = cannot place own risk preference.
+B40,B: investments,agrees must take big risks,Yes,Don't know,attitudinal/self-description,INCLUDE,Universally asked 1-7 agreement item.
+B41,B: investments,ever bought a meme stock,Yes,Don't know,recollection,INCLUDE,Universally asked; DK = cannot recall.
+B23,B: investments,heard of cryptocurrencies,Yes,Don't know,recollection,INCLUDE,Universally asked awareness item.
+B24,B: investments,perceived crypto riskiness,No — asked only if B23=1,Don't know,attitudinal/self-description,EXCLUDE,Behind skip pattern (B23=1).
+B25,B: investments,has invested in crypto,No — asked only if B23=1,Don't know,factual/account knowledge,EXCLUDE,Behind skip pattern (B23=1).
+B26,B: investments,considering crypto in future,No — asked only if B25!=1,Don't know,attitudinal/self-description,EXCLUDE,Behind skip pattern (conditional on B25).
+C22_1,C22 grid (4 rows),trading channel frequency: via a specific advisor,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own frequency. GRID — see battery weighting.
+C22_2,C22 grid (4 rows),trading channel frequency: by calling the firm,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own frequency. GRID — see battery weighting.
+C22_3,C22 grid (4 rows),trading channel frequency: online via website,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own frequency. GRID — see battery weighting.
+C22_4,C22 grid (4 rows),trading channel frequency: via mobile app,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own frequency. GRID — see battery weighting.
+C40,C: accounts,worried internet makes accounts less secure,Yes,Don't know,attitudinal/self-description,INCLUDE,Universally asked 1-7 agreement item.
+C23_1,C23 grid (4 rows),pays investment advice fees,Yes,Don't know,factual/account knowledge,INCLUDE,Universally administered grid row; DK = does not know own fee structure. GRID — see battery weighting.
+C23_2,C23 grid (4 rows),pays trade commissions,Yes,Don't know,factual/account knowledge,INCLUDE,Universally administered grid row; DK = does not know own fee structure. GRID — see battery weighting.
+C23_3,C23 grid (4 rows),pays mutual fund/ETF fees,Yes,Don't know,factual/account knowledge,INCLUDE,Universally administered grid row; DK = does not know own fee structure. GRID — see battery weighting.
+C23_4,C23 grid (4 rows),pays account service fees,Yes,Don't know,factual/account knowledge,INCLUDE,Universally administered grid row; DK = does not know own fee structure. GRID — see battery weighting.
+C24,C: accounts,approximate total fee percentage,Yes,Don't know,factual/account knowledge,INCLUDE,Universally asked; DK = does not know own fee level.
+C26,C: accounts,has authorized a trusted contact,Yes,Don't know,factual/account knowledge,INCLUDE,Universally asked; DK = does not know own account setup.
+C41,C: accounts,authorized trusted contact at account opening,No — asked only if C26=1,Don't know/Don't recall,recollection,EXCLUDE,"Behind skip pattern; 98 also merges DK with ""don't recall""."
+C42,C: accounts,recalls being asked to name a trusted contact,"No — asked only if C26 in (2,98,99)",Don't know,recollection,EXCLUDE,Behind skip pattern.
+C43,C: accounts,willing to name a trusted contact,"No — asked only if C26 in (2,98,99)",Don't know,attitudinal/self-description,EXCLUDE,Behind skip pattern.
+C7,C: accounts,ever checked a regulator on a professional,Yes,Don't know,recollection,INCLUDE,Universally asked; DK = cannot recall.
+D40,D: markets/fraud,US markets are fair to all investors,Yes,Don't know,attitudinal/self-description,INCLUDE,Universally asked 1-7 agreement item.
+D31,D: markets/fraud,worried about losing money to fraud,Yes,Don't know,attitudinal/self-description,INCLUDE,Universally asked 1-7 agreement item.
+D41,D: markets/fraud,believes was targeted by fraud in past year,Yes,Don't know,recollection,INCLUDE,Universally asked; DK = cannot say whether targeted.
+D42,D: markets/fraud,lost money to the fraud,No — asked only if D41=1,Don't know,recollection,EXCLUDE,Behind skip pattern (D41=1).
+E2,E: disclosure,ever received investment disclosures,Yes,Don't know,recollection,INCLUDE,Universally asked; DK = cannot recall.
+E3,E: disclosure,usual handling of disclosures,No — asked only if E2=1,Don't know,behavioral self-report,EXCLUDE,Behind skip pattern (E2=1).
+E4,E: disclosure,perceived value of disclosures,No — asked only if E2=1,Don't know,attitudinal/self-description,EXCLUDE,Behind skip pattern (E2=1).
+E6,E: disclosure,preferred disclosure delivery method,Yes,Don't know,attitudinal/self-description,INCLUDE,Universally asked preference item.
+F30_1,F30 grid (11 rows),reliance on personal financial professionals,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own reliance. GRID — see battery weighting.
+F30_2,F30 grid (11 rows),reliance on brokerage research/tools,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own reliance. GRID — see battery weighting.
+F30_3,F30 grid (11 rows),reliance on popular investments on a trading app,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own reliance. GRID — see battery weighting.
+F30_4,F30 grid (11 rows),reliance on business/finance articles,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own reliance. GRID — see battery weighting.
+F30_5,F30 grid (11 rows),reliance on TV programs,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own reliance. GRID — see battery weighting.
+F30_6,F30 grid (11 rows),reliance on radio programs,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own reliance. GRID — see battery weighting.
+F30_7,F30 grid (11 rows),reliance on online videos,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own reliance. GRID — see battery weighting.
+F30_8,F30 grid (11 rows),reliance on podcasts,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own reliance. GRID — see battery weighting.
+F30_9,F30 grid (11 rows),reliance on social media groups/message boards,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own reliance. GRID — see battery weighting.
+F30_10,F30 grid (11 rows),reliance on paid newsletters/online resources,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own reliance. GRID — see battery weighting.
+F30_12,F30 grid (11 rows),"reliance on friends, family, colleagues",Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own reliance. GRID — see battery weighting.
+F31_1,F31 grid (11 rows),uses YouTube for investing information,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own use. GRID — see battery weighting.
+F31_2,F31 grid (11 rows),uses Facebook for investing information,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own use. GRID — see battery weighting.
+F31_3,F31 grid (11 rows),uses Reddit for investing information,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own use. GRID — see battery weighting.
+F31_4,F31 grid (11 rows),uses TikTok for investing information,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own use. GRID — see battery weighting.
+F31_5,F31 grid (11 rows),uses Instagram for investing information,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own use. GRID — see battery weighting.
+F31_6,F31 grid (11 rows),uses Twitter for investing information,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own use. GRID — see battery weighting.
+F31_7,F31 grid (11 rows),uses Discord for investing information,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own use. GRID — see battery weighting.
+F31_10,F31 grid (11 rows),uses LinkedIn for investing information,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own use. GRID — see battery weighting.
+F31_40,F31 grid (11 rows),uses WhatsApp for investing information,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own use. GRID — see battery weighting.
+F31_41,F31 grid (11 rows),uses Telegram for investing information,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own use. GRID — see battery weighting.
+F31_42,F31 grid (11 rows),uses Rumble for investing information,Yes,Don't know,behavioral self-report,INCLUDE,Universally administered grid row; DK = cannot report own use. GRID — see battery weighting.
+F40,F: information,acts on social-media personality recommendations,Yes,Don't know,behavioral self-report,INCLUDE,Universally asked frequency item.
+G2,G: quiz/self-perception,self-assessed investing knowledge,Yes,Don't know,attitudinal/self-description,EXCLUDE,Used as a model covariate elsewhere in the study; cannot also serve as an auxiliary control.
+G30_1,G30 grid (6 rows),reason for investing: make money short term,Yes,Don't know,attitudinal/self-description,INCLUDE,Universally administered grid row; DK = cannot place own motive. GRID — see battery weighting.
+G30_2,G30 grid (6 rows),reason for investing: make money long term,Yes,Don't know,attitudinal/self-description,INCLUDE,Universally administered grid row; DK = cannot place own motive. GRID — see battery weighting.
+G30_3,G30 grid (6 rows),reason for investing: entertainment/excitement,Yes,Don't know,attitudinal/self-description,INCLUDE,Universally administered grid row; DK = cannot place own motive. GRID — see battery weighting.
+G30_4,G30 grid (6 rows),reason for investing: peers are doing it,Yes,Don't know,attitudinal/self-description,INCLUDE,Universally administered grid row; DK = cannot place own motive. GRID — see battery weighting.
+G30_5,G30 grid (6 rows),reason for investing: make a difference/values,Yes,Don't know,attitudinal/self-description,INCLUDE,Universally administered grid row; DK = cannot place own motive. GRID — see battery weighting.
+G30_6,G30 grid (6 rows),reason for investing: to learn about investing,Yes,Don't know,attitudinal/self-description,INCLUDE,Universally administered grid row; DK = cannot place own motive. GRID — see battery weighting.
+G31,G: quiz/self-perception,importance of ESG in decisions,Yes,Don't know,attitudinal/self-description,INCLUDE,Universally asked 1-10 importance item.
+G40,G: quiz/self-perception,parents held securities,Yes,Don't know,factual knowledge about another person,EXCLUDE,Used elsewhere in the study; 98 concerns knowledge of parents rather than of self.
+G41,G: quiz/self-perception,family talked about investing,Yes,Don't know/Don't recall,recollection,EXCLUDE,"Used elsewhere in the study; 98 merges DK with ""don't recall""."
+G42,G: quiz/self-perception,'people like me aren't usually investors',Yes,Don't know,attitudinal/self-description,INCLUDE,Universally asked 1-7 agreement item.
+G43,G: quiz/self-perception,would accept guaranteed 25% return,Yes,Don't know,n/a,EXCLUDE,STUDY OUTCOME. Including the outcome in a control would guarantee an association.
+G4,G: quiz,financial-knowledge quiz item (11-item frozen battery),Yes,Don't know,n/a,EXCLUDE,Quiz item; source of the predictor n_dk.
+G5,G: quiz,financial-knowledge quiz item (11-item frozen battery),Yes,Don't know,n/a,EXCLUDE,Quiz item; source of the predictor n_dk.
+G6,G: quiz,financial-knowledge quiz item (11-item frozen battery),Yes,Don't know,n/a,EXCLUDE,Quiz item; source of the predictor n_dk.
+G7,G: quiz,financial-knowledge quiz item (11-item frozen battery),Yes,Don't know,n/a,EXCLUDE,Quiz item; source of the predictor n_dk.
+G21,G: quiz,financial-knowledge quiz item (11-item frozen battery),Yes,Don't know,n/a,EXCLUDE,Quiz item; source of the predictor n_dk.
+G8,G: quiz,financial-knowledge quiz item (11-item frozen battery),Yes,Don't know,n/a,EXCLUDE,Quiz item; source of the predictor n_dk.
+G44,G: quiz,financial-knowledge quiz item (11-item frozen battery),Yes,Don't know,n/a,EXCLUDE,Quiz item; source of the predictor n_dk.
+G22,G: quiz,financial-knowledge quiz item (11-item frozen battery),Yes,Don't know,n/a,EXCLUDE,Quiz item; source of the predictor n_dk.
+G11,G: quiz,financial-knowledge quiz item (11-item frozen battery),Yes,Don't know,n/a,EXCLUDE,Quiz item; source of the predictor n_dk.
+G12,G: quiz,financial-knowledge quiz item (11-item frozen battery),Yes,Don't know,n/a,EXCLUDE,Quiz item; source of the predictor n_dk.
+G13,G: quiz,financial-knowledge quiz item (11-item frozen battery),Yes,Don't know,n/a,EXCLUDE,Quiz item; source of the predictor n_dk.
+G23,G: quiz,call-option bonus item,Yes,Don't know,n/a,EXCLUDE,"Bonus quiz item, excluded from the frozen 11-item battery by FINRA definition."

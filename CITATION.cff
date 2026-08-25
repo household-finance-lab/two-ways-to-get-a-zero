@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+title: >-
+  Two Ways to Get a Zero: don't-know responding and acceptance of an
+  implausible investment proposition in the 2024 NFCS Investor Survey
+message: >-
+  If you use this repository, please cite it as below. Note that this work has
+  not been peer reviewed.
+type: software
+authors:
+  - family-names: Gan
+    given-names: Lena
+    orcid: "https://orcid.org/0009-0008-4032-4460"
+    affiliation: Household Finance Lab
+  - family-names: Kay
+    given-names: Sara
+    affiliation: Household Finance Lab
+repository-code: "https://github.com/household-finance-lab/two-ways-to-get-a-zero"
+license: MIT
+license-url: "https://opensource.org/licenses/MIT"
+date-released: 2026-08-20
+version: "1.0.0"
+keywords:
+  - financial knowledge measurement
+  - don't know responses
+  - survey methodology
+  - household finance
+  - reproducible research
+abstract: >-
+  An exploratory analysis of the 2024 NFCS Investor Survey (n = 2,861) asking
+  whether, among respondents with the same number of correct answers on an
+  11-item investment knowledge battery, the composition of the remaining
+  responses is associated with acceptance of an implausible guaranteed 25%
+  annual return. The repository contains the full Stata build and analysis
+  pipeline, a Python out-of-sample prediction layer, a measurement-sensitivity
+  audit of the auxiliary control, and a curated record of analytical decisions
+  including interpretations that were revised or discarded. Not peer reviewed.

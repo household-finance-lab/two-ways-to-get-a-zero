@@ -1,0 +1,221 @@
+----------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/lenagan/Desktop/NFCS_2024_merged_analysis_log.txt
+  log type:  text
+ opened on:  17 Jul 2026, 11:24:01
+
+. 
+end of do-file
+
+. do "/var/folders/gh/09k67mdn3ks9zh6wymygw2880000gn/T//SD39757.000000"
+
+. use "$state_file", clear
+
+. 
+. display "STATE-BY-STATE FILE"
+STATE-BY-STATE FILE
+
+. describe
+
+Contains data from /Users/lenagan/Desktop/NFCS 2024 State Data 250623.dta
+ Observations:        25,539                  
+    Variables:           133                  23 JUN 2025 17:34
+----------------------------------------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------------------------------------
+NFCSID          double  %12.0g                Respondent ID
+STATEQ          double  %12.0g     STATEQ     State
+CENSUSDIV       double  %12.0g     CENSUSDIV
+                                              Census Division
+CENSUSREG       double  %12.0g     CENSUSREG
+                                              Census Region
+A50A            double  %12.0g     A50A       [GENDER (nonbinary randomly assigned)]
+A3Ar_w          double  %12.0g     A3Ar_w     Age group
+A50B            double  %12.0g     A50B       [GENDER/AGE NET (nonbinary randomly assigned)]
+A4A_new_w       double  %12.0g     A4A_new_w
+                                              Ethnicity
+A5_2015         double  %12.0g     A5_2015    What was the highest level of education that you completed? [2015 codes]
+A6              double  %12.0g     A6         What is your marital status?
+A7              double  %12.0g     A7         Which of the following describes your current living arrangements?
+A7A             double  %12.0g     A7A        [MARITAL STATUS VARIABLE]
+A11             double  %12.0g     A11      * How many children do you have who are financially dependent on you [or your spou
+A8_2021         double  %12.0g     A8_2021  * What is your [household's] approximate annual income, including wages, tips, inv
+AM21            double  %12.0g     AM21     * Have you ever been a member of the U.S. Armed Services, either in the active or
+X3              double  %12.0g     X3         [QUESTIONNAIRE VERSION VARIABLE]
+A9              double  %12.0g     A9         Which of the following best describes your current employment or work status?
+A40             double  %12.0g     A40      * [In addition to your main employment, did you also do other/Did you do any] work
+A10             double  %12.0g     A10      * Which of the following best describes your [spouse's/partner's] current employme
+A10A            double  %12.0g     A10A       [HOUSEHOLD RETIREMENT STATUS]
+A21_2015        double  %12.0g     A21_2015   Are you a part-time student taking courses for credit? [2015 base]
+A14             double  %12.0g     A14        Who in the household is most knowledgeable about saving, investing and debt?
+A41             double  %12.0g     A41      * What was the highest level of education completed by the person or any of the pe
+A61             double  %12.0g     A61      * Do you have parents or older relatives who are financially dependent on you [or
+J1              double  %12.0g     J1       * Overall, thinking of your assets, debts and savings, how satisfied are you with
+J2              double  %12.0g     J2         When thinking of your financial investments, how willing are you to take risks?
+J3              double  %12.0g     J3       * Over the past year, would you say your [household's] spending was less than, mor
+J4              double  %12.0g     J4       * In a typical month, how difficult is it for you to cover your expenses and pay a
+J40             double  %12.0g     J40      * In the past 12 months, which one of the following best describes your [and your
+J5              double  %12.0g     J5       * Have you set aside emergency or rainy day funds that would cover your expenses f
+J6              double  %12.0g     J6         Are you setting aside any money for your children's college education?
+J8              double  %12.0g     J8         Have you ever tried to figure out how much you need to save for retirement?
+J9              double  %12.0g     J9       * Before you [your spouse/partner] retired, did you try to figure out how much you
+J10             double  %12.0g     J10      * In the past 12 months, have you [has your household] experienced a large drop in
+J20             double  %12.0g     J20      * How confident are you that you could come up with $2,000 if an unexpected need a
+J60_1           double  %12.0g     J60_1    * If you had to come up with $2,000 in the next month to cover an unexpected expen
+J60_2           double  %12.0g     J60_2    * If you had to come up with $2,000 in the next month to cover an unexpected expen
+J60_3           double  %12.0g     J60_3    * If you had to come up with $2,000 in the next month to cover an unexpected expen
+J60_4           double  %12.0g     J60_4    * If you had to come up with $2,000 in the next month to cover an unexpected expen
+J60_5           double  %12.0g     J60_5    * If you had to come up with $2,000 in the next month to cover an unexpected expen
+J60_6           double  %12.0g     J60_6    * If you had to come up with $2,000 in the next month to cover an unexpected expen
+J60_7           double  %12.0g     J60_7    * If you had to come up with $2,000 in the next month to cover an unexpected expen
+J60_90          double  %12.0g     J60_90   * If you had to come up with $2,000 in the next month to cover an unexpected expen
+J60_98          double  %12.0g     J60_98   * If you had to come up with $2,000 in the next month to cover an unexpected expen
+J60_99          double  %12.0g     J60_99   * If you had to come up with $2,000 in the next month to cover an unexpected expen
+J61             double  %12.0g     J61      * In the past 5 years, have increased food costs caused you [your household] to cu
+J62             double  %12.0g     J62      * In the past 5 years, have you experienced any severe weather events (e.g., hurri
+J32             double  %12.0g     J32        How would you rate your current credit record?
+J33_40          double  %12.0g     J33_40   * How strongly do you agree or disagree with the following statement? - Thinking a
+J63             double  %12.0g     J63      * How much time do you typically spend thinking about and dealing with issues and
+J64             double  %12.0g     J64        How many of these hours occur at work?
+J41_1           double  %12.0g     J41_1    * How well do these statements describe you or your situation? - Because of my mon
+J41_2           double  %12.0g     J41_2    * How well do these statements describe you or your situation? - I am just getting
+J41_3           double  %12.0g     J41_3    * How well do these statements describe you or your situation? - I am concerned th
+J42_1           double  %12.0g     J42_1    * How often do these statements apply to you? - I have money left over at the end
+J42_2           double  %12.0g     J42_2      How often do these statements apply to you? - My finances control my life
+J43             double  %12.0g     J43      * If you were to set a financial goal for yourself today, how confident are you in
+J65             double  %12.0g     J65        Do you believe you were targeted in a financial fraud or scam in the past year?
+J66             double  %12.0g     J66        Did you lose any money as a result of the fraud or scam?
+B1              double  %12.0g     B1         Do you [Does your household] have a checking account?
+B2              double  %12.0g     B2       * Do you [Does your household] have a savings account, money market account, or CD
+B4              double  %12.0g     B4         Do you [or your spouse/partner] overdraw your checking account occasionally?
+B41_1           double  %12.0g     B41_1    * How often do you access your checking or savings account in the following ways?
+B41_2           double  %12.0g     B41_2    * How often do you access your checking or savings account in the following ways?
+B60             double  %12.0g     B60      * How strongly do you agree or disagree with the following statement? - I trust th
+B31             double  %12.0g     B31      * How often do you use your mobile device to pay for a product or service in perso
+B42             double  %12.0g     B42        How often do you use your mobile device to transfer money to another person?
+B43             double  %12.0g     B43      * How often do you use websites or apps to help with financial tasks such as budge
+B61             double  %12.0g     B61      * Would you be interested in getting financial advice from AI (artificial intellig
+C1_2012         double  %12.0g     C1_2012  * Do you [or your spouse/partner] have any retirement plans through a current or p
+C2_2012         double  %12.0g     C2_2012  * Were these plans provided by your employer or your [spouse's/partner's] employer
+C3_2012         double  %12.0g     C3_2012  * Are any of these retirement plans the kind where you [or your spouse/partner] ge
+C4_2012         double  %12.0g     C4_2012  * Do you [or your spouse/partner] have any other retirement accounts NOT through a
+C5_2012         double  %12.0g     C5_2012  * Do you [or your spouse/partner] regularly contribute to a retirement account lik
+C10_2012        double  %12.0g     C10_2012 * In the last 12 months, have you [or your spouse/partner] taken a loan from your
+C11_2012        double  %12.0g     C11_2012 * In the last 12 months, have you [or your spouse/partner] taken a hardship withdr
+B14A_1          double  %12.0g     B14A_1   * Not including retirement accounts, do you [does your household] have any investm
+B14A_60         double  %12.0g     B14A_60  * Not including retirement accounts, do you [does your household] have any investm
+EA_1            double  %12.0g     EA_1       Do you [or your spouse/partner] currently own your home?
+E7              double  %12.0g     E7         Do you currently have any mortgages on your home?
+E8              double  %12.0g     E8         Do you have any home equity loans?
+E20             double  %12.0g     E20      * Do you currently owe more on your home than you think you could sell it for toda
+E15_2015        double  %12.0g     E15_2015 * How many times have you been late with your mortgage payments in the past 12 mon
+E60             double  %12.0g     E60      * In the past 5 years, have increased housing costs (e.g., rent, mortgage) caused
+P60             double  %12.0g     P60      * At any time in your adult life (18 and older), did your parents or grandparents
+P51             double  %12.0g     P51      * Have you ever received a gift (not an inheritance) from your parents or grandpar
+P61             double  %12.0g     P61        Have you ever received an inheritance that was worth $10,000 or more?
+F1              double  %12.0g     F1         How many credit cards do you have?
+F2_1            double  %12.0g     F2_1     * In the past 12 months, which of the following describes your experience with cre
+F2_2            double  %12.0g     F2_2     * In the past 12 months, which of the following describes your experience with cre
+F2_3            double  %12.0g     F2_3     * In the past 12 months, which of the following describes your experience with cre
+F2_4            double  %12.0g     F2_4     * In the past 12 months, which of the following describes your experience with cre
+F2_5            double  %12.0g     F2_5     * In the past 12 months, which of the following describes your experience with cre
+F2_6            double  %12.0g     F2_6     * In the past 12 months, which of the following describes your experience with cre
+G1              double  %12.0g     G1         Do you [Does your household] currently have an auto loan?
+G20             double  %12.0g     G20      * Do you currently have any unpaid bills from a health care or medical service pro
+G30_1           double  %12.0g     G30_1    * Do you currently have any student loans? If so, for whose education was this/wer
+G30_2           double  %12.0g     G30_2    * Do you currently have any student loans? If so, for whose education was this/wer
+G30_3           double  %12.0g     G30_3    * Do you currently have any student loans? If so, for whose education was this/wer
+G30_4           double  %12.0g     G30_4    * Do you currently have any student loans? If so, for whose education was this/wer
+G30_5           double  %12.0g     G30_5    * Do you currently have any student loans? If so, for whose education was this/wer
+G30_97          double  %12.0g     G30_97   * Do you currently have any student loans? If so, for whose education was this/wer
+G30_98          double  %12.0g     G30_98   * Do you currently have any student loans? If so, for whose education was this/wer
+G30_99          double  %12.0g     G30_99   * Do you currently have any student loans? If so, for whose education was this/wer
+G35             double  %12.0g     G35      * How many times have you been late with a student loan payment in the past 12 mon
+G22_2015        double  %12.0g     G22_2015 * Are you concerned that you might not be able to pay off your student loans? [201
+G25_1           double  %12.0g     G25_1    * In the past 5 years, how many times have you... - Taken out an auto title loan?
+G25_2           double  %12.0g     G25_2    * In the past 5 years, how many times have you... - Taken out a short term 'payday
+G25_3           double  %12.0g     G25_3    * In the past 5 years, how many times have you... - Gotten an advance on your tax
+G25_4           double  %12.0g     G25_4      In the past 5 years, how many times have you... - Used a pawn shop?
+G25_5           double  %12.0g     G25_5      In the past 5 years, how many times have you... - Used a rent-to-own store?
+G60             double  %12.0g     G60        In the last 12 months, have you used 'Buy Now Pay Later' when making a purchase?
+G38             double  %12.0g     G38        Have you been contacted by a debt collection agency in the past 12 months?
+G23             double  %12.0g     G23      * How strongly do you agree or disagree with the following statement? - I have too
+H1              double  %12.0g     H1         Are you covered by health insurance?
+H30_3           double  %12.0g     H30_3    * In the last 12 months, was there any time when you... - Had a medical problem bu
+M1_1            double  %12.0g     M1_1     * How strongly do you agree or disagree with the following statement? - I am good
+M4              double  %12.0g     M4       * On a scale from 1 to 7, where 1 means very low and 7 means very high, how would
+M20             double  %12.0g     M20      * Was financial education offered by a school or college you attended, or a workpl
+M21_1           double  %12.0g     M21_1      When did you receive that financial education? - In high school
+M21_2_2015      double  %12.0g     M21_2_2015
+                                              When did you receive that financial education? - In college [2015 base]
+M21_3           double  %12.0g     M21_3      When did you receive that financial education? - From an employer
+M21_4           double  %12.0g     M21_4      When did you receive that financial education? - From the military
+M6              double  %12.0g     M6       * Suppose you had $100 in a savings account and the interest rate was 2% per year.
+M7              double  %12.0g     M7       * Imagine that the interest rate on your savings account was 1% per year and infla
+M8              double  %12.0g     M8         If interest rates rise, what will typically happen to bond prices?
+M31             double  %12.0g     M31      * Suppose you owe $1,000 on a loan and the interest rate you are charged is 20% pe
+M50             double  %12.0g     M50      * Which of the following indicates the highest probability of getting a particular
+M9              double  %12.0g     M9       * A 15-year mortgage typically requires higher monthly payments than a 30-year mor
+M10             double  %12.0g     M10      * Buying a single company's stock usually provides a safer return than a stock mut
+wgt_n2          double  %12.0g              * For NATIONAL totals: weight within nation by age/gender, ethnicity, education, C
+wgt_d2          double  %12.0g              * For DIVISIONAL totals: weight within each Census Division by age/gender, ethnici
+wgt_s3          double  %12.0g                For STATE totals: weight within each state by age/gender, ethnicity, education
+                                            * indicated variables have notes
+----------------------------------------------------------------------------------------------------------------------------------
+Sorted by: 
+
+. count
+  25,539
+
+. 
+end of do-file
+
+. do "/var/folders/gh/09k67mdn3ks9zh6wymygw2880000gn/T//SD39757.000000"
+
+. assert r(N) == 25539
+
+. 
+end of do-file
+
+. do "/var/folders/gh/09k67mdn3ks9zh6wymygw2880000gn/T//SD39757.000000"
+
+. isid NFCSID
+
+. 
+end of do-file
+
+. do "/var/folders/gh/09k67mdn3ks9zh6wymygw2880000gn/T//SD39757.000000"
+
+. local state_keep "NFCSID"
+
+. 
+. foreach v in STATEQ CENSUSDIV CENSUSREG ///
+>              A50A A3Ar_w A4A_new_w A5_2015 ///
+>              A6 A7A A8_2021 A9 {
+  2. 
+.     capture confirm variable `v'
+  3. 
+.     if !_rc {
+  4.         local state_keep "`state_keep' `v'"
+  5.     }
+  6.     else {
+  7.         display as error ///
+>         "NOTE: `v' was not found in the State file and will be omitted."
+  8.     }
+  9. }
+
+. 
+end of do-file
+
+. do "/var/folders/gh/09k67mdn3ks9zh6wymygw2880000gn/T//SD39757.000000"
+
+. keep `state_keep'
+varlist, if exp, or in range required
+r(100);
+
+end of do-file
+
+r(100);
+
+. exit

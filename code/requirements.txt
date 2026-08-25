@@ -1,0 +1,6 @@
+# Python dependencies for the Project 1 prediction and sensitivity layers.
+# Versions are those used to produce the committed results.
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+scikit-learn>=1.3

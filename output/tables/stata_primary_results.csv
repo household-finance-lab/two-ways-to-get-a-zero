@@ -1,0 +1,9 @@
+Specification,Estimand,AME_n_dk,SE,N,Notes
+Primary multinomial,P(G43=Yes),-0.0467,0.0064,2796,Primary three-category outcome
++ self-assessed knowledge (G2),P(G43=Yes),-0.0452,0.0066,2783,Multinomial
++ 30-item non-quiz DK,P(G43=Yes),-0.0423,0.007,2796,Multinomial; original robustness measure
++ G2 + 30-item non-quiz DK,P(G43=Yes),-0.0419,0.0071,2783,Multinomial
+Loose sample rule,P(G43=Yes),-0.0466,0.0063,2854,Multinomial; broader sample
+Finer demographic controls,P(G43=Yes),-0.046,0.0063,2796,Multinomial
+Yes vs No only,P(Yes),-0.0294,0.0082,1828,Binary complementary estimand; G43 DK excluded
+Yes vs No + DK,P(Yes),-0.0468,0.0063,2796,Binary robustness

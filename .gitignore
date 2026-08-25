@@ -1,0 +1,51 @@
+# ------------------------------------------------------------
+# Household Finance Lab — files not committed to GitHub
+# ------------------------------------------------------------
+
+# Respondent-level data. Blanket ignore: anything not explicitly
+# allowed below stays out. Source files come from FINRA; derived
+# files are rebuilt locally by code/01_build.do. See data/README.md.
+*.dta
+*.sav
+*.csv
+*.zip
+
+# Explicitly allowed: documentation and aggregate results only.
+# No file listed here contains respondent-level data.
+#
+# NOTE: a negation cannot rescue a file inside an ignored DIRECTORY,
+# so every allowed path below sits under a directory that is tracked.
+!docs/nonquiz-dk-item-audit.csv
+!output/nonquiz_dk_sensitivity_results.csv
+!output/tables/*.csv
+!code/requirements.txt
+
+# Derived respondent-level exports written by the build into output/.
+# These are re-creatable and must never be committed. Listed after the
+# allowances above so they win.
+output/nfcs_p1_built_full.csv
+output/nfcs_p1_built_analytic.csv
+output/nfcs_p1_final_analytic.csv
+output/*.dta
+
+# Stata scratch written alongside the logs
+output/build-decisions.txt
+output/analysis-decisions.txt
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+
+# Stata
+*.tmp
+*.gph
+*.smcl
+
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
