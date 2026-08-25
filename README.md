@@ -19,7 +19,7 @@ Among investors who answered the same number of knowledge questions correctly, e
 | [`docs/empirically-yours-01-two-ways-to-get-a-zero.md`](docs/empirically-yours-01-two-ways-to-get-a-zero.md) | The readable write-up: what we asked, what we found, and where we were wrong |
 | [`CODEBOOK.md`](CODEBOOK.md) | Every variable used, answer keys, derived measures, and how to rebuild them in R, SPSS, or Python |
 | [`ANALYTICAL-DECISIONS.md`](ANALYTICAL-DECISIONS.md) | Every consequential choice, its alternative, and whether the number changed — including three interpretations we discarded |
-| [`docs/workflow.md`](docs/workflow.md) | One-page map from the two source datasets through Stata inference, Python prediction, measurement sensitivity, and the next experiment |
+| [`docs/workflow.md`](docs/workflow.md) | One-page map from the two source datasets through Stata inference, Python prediction, measurement sensitivity, and the next experiment — including a [diagram of the pipeline as files](docs/etl-pipeline.svg) |
 | [`LITERATURE.md`](LITERATURE.md) | Who established what before us, on what data, and what remains open. A living map: entries carry verification markers |
 | [`data/README.md`](data/README.md) | Where to get the source data, what the build expects, how to verify your build |
 | [`docs/nonquiz-dk-sensitivity-interpretation.md`](docs/nonquiz-dk-sensitivity-interpretation.md) | Measurement audit of the auxiliary DK control, undertaken after we found the original was under-specified |
