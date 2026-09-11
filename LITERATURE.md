@@ -1,6 +1,7 @@
 # Literature
 
 What was already known before this study, who established it, on what data, and what it leaves open.
+
 ---
 
 ## 1. The origin: political science, two decades ahead
@@ -16,6 +17,7 @@ What was already known before this study, who established it, on what data, and 
 Respondents can be fully informed, partially informed, misinformed, or uninformed — four latent states, three response categories, and a scoring rule that collapses them into two. Two respondents with identical knowledge get different scores if they differ in willingness to answer under uncertainty.
 
 This literature provides the theoretical foundation for distinguishing incorrect responses from “don't know” responses.
+
 ---
 
 ## 2. The financial translation
@@ -25,6 +27,7 @@ This literature provides the theoretical foundation for distinguishing incorrect
 Respondents who answer incorrectly and those who answer "do not know" — both counted as illiterate under conventional scoring — differ in socio-economic characteristics and in fraud victimization risk. Bank of Italy CAPI survey, early 2020; 2,036 Italian adults; Big Five items with an explicit DK option; ordered probit and probit. Built explicitly on Mondak.
 
 **Leaves open:** they predict *who* falls into each group. The number of correct answers is not held constant, so the incorrect-versus-DK substitution at fixed demonstrated knowledge is not estimated. Italian data, uniform item format, self-reported fraud as the outcome.
+
 ---
 
 ## 3. Measurement models
