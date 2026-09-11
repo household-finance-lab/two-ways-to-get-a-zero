@@ -129,35 +129,6 @@ Also from FINRA's 2024 Investor Survey report: investors who rate their own know
 5. **Reproducible code.** None of the studies above ship runnable code. This repository does.
 
 ---
-
-## Removed in the 25 August 2026 sweep
-
-Three entries were dropped because no source could be found for them. They are
-recorded here rather than deleted quietly, so that anyone who recognises one can
-tell us what it was.
-
-**Ooi (2020)** — previously grouped with Knoll & Houts as a 3PL model of
-financial knowledge items. Nothing matching an author "Ooi" on this topic
-appears in the registry. Possibly a thesis, a working paper, or a venue that is
-not indexed.
-
-**IZA DP 16628** — described in our notes as a multi-arm randomized trial on DK
-options and gender gaps. IZA discussion papers are frequently not registered, so
-absence is not evidence against it, but we could not confirm the number, the
-authors, or the title.
-
-**Marley-Payne et al. (2024)** — an author and a year, with no title and no
-description attached. The nearest candidate, Marley-Payne, Valdes, Mottola &
-Fontes (2025) in *Journal of Financial Literacy and Wellbeing*, is about math
-and financial literacy in relation to financial behaviour, which does not belong
-in a section on experimental evidence about the DK option. Rather than
-substitute a paper that does not fit the argument it was cited for, the entry
-was removed.
-
----
-
 ## Contributing
 
 If we have mischaracterized a study, missed one that occupies this ground, or overstated what remains open, open an Issue or email householdfinancelab@gmail.com. That is a correction we want.
-
-That includes the three entries above. If one of them is a paper you know, tell us and it goes back in.
